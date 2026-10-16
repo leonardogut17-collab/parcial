@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "APP",
+    "slug": "app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "appmovil",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.leonardogut17.app"
+    },
+    "android": {
+      "package": "com.leonardogut17.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#0E2433",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#0E2433"
+        }
+      ],
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "APP usa la cámara para fotografiar los lugares que guardas.",
+          "recordAudioAndroid": false
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "APP usa tu ubicación para registrar dónde tomaste cada foto."
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
